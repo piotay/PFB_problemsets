@@ -1,0 +1,14 @@
+  315  git add oops2
+  316  git commit -m "Adding oops 2"
+  317  git push
+  318  rm oops2
+  319  git add oops2
+  321  git commit -m "removing oops2"
+  322  git push
+  323  vi never
+  324  ls
+  325  git reset never
+  326  git add never
+  327  git reset never
+  328  man rm
+  329  man cp
