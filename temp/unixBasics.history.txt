@@ -1,0 +1,16 @@
+  413  rm -d temp
+  414  man rm
+  415  ls
+  416  git status
+  417  cd temp
+  418  git add cancer_genes.fasta 
+  419  git commit -m "adding temp"
+  420  git push
+  421  vi mysequences.txt
+  422  git add mysequences.txt
+  423  git commit -m "adding mysequences"
+  424  git push
+  425  vi never
+  426  git add never
+  427  git reset never
+  428  history
