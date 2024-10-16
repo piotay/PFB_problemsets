@@ -22,3 +22,6 @@ print(f"""Here is your sequence with Ts replaced with Us: {rna}
 print(f"""The AT content of your sequence is {(nas+nts)/len(seq):.1%}.
 The GC content of your sequence is {(ncs+ngs)/len(seq):.1%}
 """)
+
+
+
