@@ -5,6 +5,8 @@ seq = sys.argv[1]
 
 subseq = seq[99:200]
 
+subseq = subseq.upper()
+
 print(f"""
 Here are nucleotides between 100 and 200:
 {subseq}
