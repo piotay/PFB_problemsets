@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+
+#Not done!!! working on no7
+
 import re
 import sys
 
@@ -75,7 +78,7 @@ translation_table = {
 #second file is translated
 #third file is only the longest ORF
 
-with open("Python_08.codons-6frames.nt","w") as write_codons, open("Python_08_translated.txt", "w") as write_aa, open("Python_08.translated-longest.txt", "w") as long_aa:
+with open("Python_08.codons-6frames.nt","w") as write_codons, open("Python_08_translated.txt", "w") as write_aa, open("Python_08.translated-longest.txt", "w") as long_aa, open("Python_08.orf-longest.nt", "w") as longest_aa_codon:
         #since each file is organized by gene, I will iterate through each gene in seq 1. the same genes are in all six seqs 
         # so it doesnt matter which I do
 
@@ -173,7 +176,7 @@ with open("Python_08.codons-6frames.nt","w") as write_codons, open("Python_08_tr
                 
                 if long != None:
 
-                    found_aaseq = long.group(1)
+                    found_aaseq = long.group(0)
                     cur_len = len(found_aaseq)
 
                 #using if statements to see if the single longest found M to stop is 
@@ -186,9 +189,16 @@ with open("Python_08.codons-6frames.nt","w") as write_codons, open("Python_08_tr
                         longestlen = cur_len
                         longestseq = found_aaseq
 
-            long_aa.write(f"{gene} aminoacids\nLongest ORF Peptide Sequence\n{longestseq}\n")
+                    location_long = entry.find(longestseq)
+
+                    if location_long >= 0:
+                        thecodons = listy[location_long:(location_long+longestlen+1)]
+
+                        longest_aa_codon.write(f"{gene}\nLongest ORF Codons\n{thecodons}\n")
+                       
                 
 
+            long_aa.write(f"{gene} aminoacids\nLongest ORF Peptide Sequence\n{longestseq}\n")
 
 
                  
