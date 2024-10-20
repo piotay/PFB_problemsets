@@ -1,22 +1,32 @@
 #!/usr/bin/env python3
-#NOT DONEEEEEEEEEEE---------
+#
 
 import re
 
 filepath = "/Users/pfb2024/PFB_data/Python_07.fasta"
 
 gene = ""
-fastadic = {}
+seqs = {}
 
 with open(filepath) as py7fasta:
     for line in py7fasta:
-        for (gene, desc) in re.findall(r"(^>.*?\s)(.*)", line):
+        if line.startswith(">"):
+           
+            sequ = ""
+            info = re.search(r"^>(.*?)\s(.*?)\n", line)
+            gene = info.group(1)
+            desc = info.group(2)
+            seqs[gene] = desc
+            
 
-            if gene:
-                seq = ""
-                gene = gene.replace(">", "")
-                print(f"id: {gene} desc: {desc}")
-            else:
-                seq = seq + line.rstrip()
-                fastadic[gene] = seq
+        #else:
+
+
+            #sequ = sequ + line.rstrip()
+
+            #seqs[gene] = sequ
+
+    print(seqs)
+
+            
 
