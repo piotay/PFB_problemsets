@@ -31,7 +31,7 @@ with open("/Users/pfb2024/PFB_data/bionet copy.txt", 'r') as enzs:
 
 fastaDict = {}
 
-#here I build my dictionary of genes and sequences from teh fasta file
+#here I build my dictionary of genes and sequences from the fasta file
 with open(fastaseq, "r") as seq_fasta:
     for line in seq_fasta:
         if line.startswith(">"):
@@ -47,17 +47,12 @@ with open(fastaseq, "r") as seq_fasta:
 
     #now, I want to search each gene sequence, I want to check if 
     # any enzyme has a sequence contained
-
     for gene in fastaDict:
         for enzno in enzdict:
             if enzname in enzno:
                 for site in enzdict[enzno]:
                     gene_sequence_to_check = fastaDict[gene]
-
-                    site.replace("R")
-
-
-    
+                    site.replace("R")    
     
     sites = []
     match = seq[0:]

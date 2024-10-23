@@ -1,0 +1,2 @@
+hi! I'm working in python3 and writing bioinformatics code. I want you to write a script that I can run from the terminal. I want the script to Open a FASTA file and print the reverse complement of each sequence in the file. There is a line that starts with > and has the gene name after that. Then the next few lines are genetic sequence. Make sure to print the output in FASTA format including the sequence name and a note in the description that this is the reverse complement. Print to STDOUT and capture the output into a file with a command line redirect '>'.
+

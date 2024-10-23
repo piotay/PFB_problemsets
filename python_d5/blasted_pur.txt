@@ -1,0 +1,7 @@
+# BLASTP 2.6.0+
+# Query: tr|A0A248KKL2|A0A248KKL2_9ENTR Bifunctional purine biosynthesis protein PurH OS=Kluyvera genomosp. 3 OX=2774055 GN=purH PE=3 SV=1
+# Database: s_paratyphi.prot.fa
+# Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+tr|A0A248KKL2|A0A248KKL2_9ENTR	A9N0L8	99.055	529	5	0	1	529	1	529	0.0	1083
+# BLAST processed 1 queries
